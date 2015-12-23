@@ -3,7 +3,7 @@
 ## the cache stores the value in the environment of the makeCacheMatrix function for later retrieval
 ## the funtions get and set function as then returned as a list capturing the cached values from the outer function scope
 makeCacheMatrix <- function(x = matrix()) {
-		    i <- NULL
+	i <- NULL
         set <- function(y) {
                 x <<- y
                 i <<- NULL
@@ -20,7 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve either gets the cache's inverse if it already has it
 ## or else calculates the inverse, then caches returning the solution
 cacheSolve <- function(x, ...) {
-		    i <- x$getinverse()
+	i <- x$getinverse()
         if(!is.null(i)) {
                 message("getting cached data")
                 return(i)
